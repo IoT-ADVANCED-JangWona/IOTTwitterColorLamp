@@ -1,7 +1,7 @@
 # IOTTwitterColorLamp
 
 Videos include showing esp8266 board and node-red Dashboard,
-checking connect and events from the IoT Platform console
+checking events from the IoT Platform console
 
 Tesla related tweets had little color change, 
 so I changed the tag to Trump at the end of the video.
