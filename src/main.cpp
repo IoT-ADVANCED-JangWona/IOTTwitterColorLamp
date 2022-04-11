@@ -2,11 +2,12 @@
 #include <IBMIOTF8266.h>
 #include <Adafruit_NeoPixel.h>
 
-#define ledPin 15
-#define ledNum 4
-int red=0;
-int green=9;
-int blue=0;
+#define                 ledPin 15
+#define                 ledNum 4
+int                     red=0;
+int                     green=9;
+int                     blue=0;
+
 Adafruit_NeoPixel pixels(ledNum,ledPin,NEO_GRB+NEO_KHZ800);
 
 String user_html = ""
@@ -25,7 +26,7 @@ void publishData() {
     StaticJsonDocument<512> root;
     JsonObject data = root.createNestedObject("d");
 
-// USER CODE EXAMPLE : command handling
+// USER CODE EXAMPLE : get R,G,B 
     data["r"] = red;
     data["g"] = green;
     data["b"] = blue;
@@ -77,10 +78,10 @@ void message(char* topic, byte* payload, unsigned int payloadLength) {
 
 void setup() {
     Serial.begin(115200);
+    
+// USER CODE EXAMPLE : add pixels func.
     pixels.begin();
     pixels.clear();
-// USER CODE EXAMPLE : meta data update
-    //pinMode(RELAY, OUTPUT);
 // USER CODE EXAMPLE
 
     initDevice();
