@@ -1,0 +1,11 @@
+.pio
+.vscode
+.test
+.lib
+.include
+.data
+data/config.json
+data/fingerprint.txt
+include/README
+lib/README
+test/README
